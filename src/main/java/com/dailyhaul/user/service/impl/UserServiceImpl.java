@@ -31,11 +31,11 @@ public class UserServiceImpl implements UserService {
         userRepository.save(user);
     }
 
-    public Optional<UserResponse> getUser(Long userId) {
+    public Optional<UserResponse> getUser(String userId) {
         return userRepository.findById(userId).map(Mappers::getUserResponse);
     }
 
-    public boolean updateUser(Long userId, UserRequest userRequest) {
+    public boolean updateUser(String userId, UserRequest userRequest) {
 
         return userRepository.findById(userId)
                 .map(existingUser -> {

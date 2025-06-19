@@ -12,7 +12,7 @@ public interface UserService {
 
     void addUser(UserRequest userRequest);
 
-    Optional<UserResponse> getUser(Long userId);
+    Optional<UserResponse> getUser(String userId);
 
-    boolean updateUser(Long userId, UserRequest userRequest);
+    boolean updateUser(String userId, UserRequest userRequest);
 }

@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserResponse {
 
-    private Long id;
+    private String id;
 
     private String firstName;
 
@@ -24,7 +24,7 @@ public class UserResponse {
 
     private AddressDTO address;
 
-    public UserResponse(Long id, String firstName, String lastName, String email, String phone, UserRole role) {
+    public UserResponse(String id, String firstName, String lastName, String email, String phone, UserRole role) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
