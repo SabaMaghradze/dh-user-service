@@ -1,13 +1,5 @@
 spring:
   application:
     name: user-service
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/userdb
-      database: userdb
-#      uri: mongodb+srv://sabamaghradze1001:aHNRoSlxwR3LjfUM@user-data.zz7h6ar.mongodb.net/user-data?retryWrites=true&w=majority&tls=true
-#      database: user-data
-
-
-server:
-  port: 8082
+  config:
+    import: optional:configserver:http://localhost:8888
